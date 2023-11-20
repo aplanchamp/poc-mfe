@@ -1,0 +1,22 @@
+.cartToggleBag {
+  width: 25px;
+  fill: #e2001a;
+}
+
+.cartToggleButton {
+  background-color: none;
+  padding: 1.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: #0070f3;
+    border-color: #0070f3;
+
+    .cartToggleBag {
+      fill: #0070f3;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+export enum EVENTS {
+  SET_CHECKOUT_ROUTES = 'SET_CHECKOUT_ROUTES',
+}

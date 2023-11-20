@@ -1,0 +1,61 @@
+{
+  "name": "checkout-mfe",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@okta/okta-auth-js": "^7.4.3",
+    "@okta/okta-react": "^6.7.0",
+    "@types/node": "^16.18.59",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "context-manager": "file:../context-manager",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "zustand": "^4.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:mfe:client": "npm run build:mfe:client && npm run serve:mfe",
+    "start:mfe:both": "npm run build:mfe:both && npm run serve:mfe",
+    "serve:mfe": "npx serve dist/ -p 3001",
+    "build:mfe:both": "npm run build:mfe:client && npm run build:mfe:server",
+    "build:mfe:client": "rimraf dist/client && webpack --mode production --config config/webpack.client.js",
+    "build:mfe:server": "rimraf dist/server && webpack --mode production --config config/webpack.server.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@module-federation/node": "^1.0.7",
+    "babel-loader": "^9.1.3",
+    "html-webpack-plugin": "^5.5.3",
+    "postcss-loader": "^7.3.3",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.10.0"
+  }
+}

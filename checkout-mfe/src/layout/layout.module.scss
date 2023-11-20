@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 25px;
+  text-decoration: underline;
+}
+
+.navListItem:hover {
+  color: #555;
+}
+
+.content {
+  text-align: center;
+}
